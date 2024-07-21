@@ -19,12 +19,5 @@ public class ProductController {
     @Autowired
     private ProductService productService;
 
-    @Autowired
-    FakeStoreProductServiceImpl fakeStoreProductService;
 
-    @GetMapping("/products")
-    public ResponseEntity getAll(){
-        List<FakeStoreProductResponseDTO> products = fakeStoreProductService.getAllProducts();
-        return ResponseEntity.ok(products);
-    }
 }

@@ -4,6 +4,7 @@ import dev.sana.EcomProductService.Client.FakeStoreClient;
 import dev.sana.EcomProductService.DTO.FakeStoreProductResponseDTO;
 import dev.sana.EcomProductService.Entity.Product;
 import dev.sana.EcomProductService.Exception.NoProductPresentException;
+import dev.sana.EcomProductService.Exception.ProductNotFoundException;
 import dev.sana.EcomProductService.Service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -20,15 +21,19 @@ public class FakeStoreProductServiceImpl {
     public List<FakeStoreProductResponseDTO> getAllProducts() {
         List<FakeStoreProductResponseDTO> fakeStoreProducts = fakeStoreClient.getAllProducts();
         if(fakeStoreProducts == null){
-            throw new NoProductPresentException("No products are found");
+            throw new ProductNotFoundException("No products are found");
         }
         return fakeStoreProducts;
     }
 
 
 
-    public Product getProduct(int productId) {
-        return null;
+    public FakeStoreProductResponseDTO getProductById(int productId) {
+        FakeStoreProductResponseDTO fakeStoreProduct = fakeStoreClient.getProductById(productId);
+        if(fakeStoreProduct == null){
+            throw new ProductNotFoundException("Product not found with id: "+ productId);
+        }
+        return fakeStoreProduct;
     }
 
 
