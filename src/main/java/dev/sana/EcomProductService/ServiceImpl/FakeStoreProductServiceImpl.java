@@ -5,6 +5,7 @@ import dev.sana.EcomProductService.DTO.FakeStoreProductResponseDTO;
 import dev.sana.EcomProductService.Entity.Product;
 import dev.sana.EcomProductService.Exception.NoProductPresentException;
 import dev.sana.EcomProductService.Exception.ProductNotFoundException;
+import dev.sana.EcomProductService.Repository.ProductRepository;
 import dev.sana.EcomProductService.Service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -14,6 +15,8 @@ import java.util.List;
 
 @Service
 public class FakeStoreProductServiceImpl {
+
+
 
     @Autowired
     private FakeStoreClient fakeStoreClient;

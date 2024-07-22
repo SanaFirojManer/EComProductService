@@ -2,6 +2,7 @@ package dev.sana.EcomProductService.Controller;
 
 import dev.sana.EcomProductService.DTO.FakeStoreProductResponseDTO;
 import dev.sana.EcomProductService.Exception.InvalidInputException;
+import dev.sana.EcomProductService.Exception.RandomException;
 import dev.sana.EcomProductService.ServiceImpl.FakeStoreProductServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -29,5 +30,10 @@ public class FakeProductController {
         }
         FakeStoreProductResponseDTO product =fakeStoreProductService.getProductById(id);
         return ResponseEntity.ok(product);
+    }
+
+    @GetMapping("/productexception")
+    public ResponseEntity getProductException(){
+        throw new RandomException("Exception from product!");
     }
 }

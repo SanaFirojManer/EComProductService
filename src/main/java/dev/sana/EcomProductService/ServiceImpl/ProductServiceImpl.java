@@ -3,7 +3,9 @@ package dev.sana.EcomProductService.ServiceImpl;
 import dev.sana.EcomProductService.DTO.FakeStoreProductResponseDTO;
 import dev.sana.EcomProductService.DTO.ProductResponseDTO;
 import dev.sana.EcomProductService.Entity.Product;
+import dev.sana.EcomProductService.Repository.ProductRepository;
 import dev.sana.EcomProductService.Service.ProductService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -11,6 +13,8 @@ import java.util.List;
 @Service
 public class ProductServiceImpl implements ProductService {
 
+    @Autowired
+    private ProductRepository productRepository;
 
     @Override
     public List<ProductResponseDTO> getAllProducts() {
@@ -24,7 +28,8 @@ public class ProductServiceImpl implements ProductService {
 
     @Override
     public Product createProduct(Product product) {
-        return null;
+        Product savedProduct = productRepository.save(product);
+        return savedProduct;
     }
 
     @Override

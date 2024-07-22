@@ -4,3 +4,22 @@ layer at which dto to entity, or entity to dto conversion happens
 conversion can be part of business logic
 
 Repository --> Input --> Entity, Output --> Entity, DB saves Entity
+
+
+Controller Inheritance or Composition:
+If your ProductController inherits from or composes another controller (like a CartController),
+ and the exception is thrown or handled in the superclass or composed controller,
+ the advice from @ControllerAdvice may still be applied.
+
+ ProductService
+ ProductServiceImpl         FakeProductServiceImpl
+
+ if@Autowired ProductService  -->single bean requred exception
+
+ at controller
+ @Autowired
+ @Qulifier("productService")
+ private ProductService productService;
+
+ why we create base model??
+ -->

@@ -7,7 +7,6 @@ import dev.sana.EcomProductService.Service.ProductService;
 public class ProductEntityDTOMapper {
     public static ProductResponseDTO convertEntityToProductResponseDTO(Product product){
         ProductResponseDTO productResponseDTO = new ProductResponseDTO();
-        productResponseDTO.setProductId(product.getProductId());
         productResponseDTO.setTitle(product.getTitle());
         productResponseDTO.setCategory(productResponseDTO.getCategory());
         productResponseDTO.setPrice(product.getPrice());
