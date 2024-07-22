@@ -5,15 +5,20 @@ import dev.sana.EcomProductService.DTO.ProductResponseDTO;
 import dev.sana.EcomProductService.Entity.Product;
 
 import java.util.List;
+import java.util.UUID;
 
 public interface ProductService {
-    List<ProductResponseDTO> getAllProducts();
+    List<Product> getAllProducts();
 
-    Product getProduct(int productId);
+    Product getProduct(UUID productId);
 
     Product createProduct(Product product);
 
-    Product updateProduct(Product updatedProduct, int productId);
+    Product updateProduct(Product updatedProduct, UUID productId);
 
-    boolean deleteProduct(int productId);
+    boolean deleteProduct(UUID productId);
+
+    Product getProduct(String productName);
+
+    List<Product> getProducts(double minPrice, double maxPrice);
 }
