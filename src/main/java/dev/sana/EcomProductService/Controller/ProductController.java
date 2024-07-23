@@ -1,14 +1,9 @@
 package dev.sana.EcomProductService.Controller;
 
-import dev.sana.EcomProductService.DTO.FakeStoreProductResponseDTO;
-import dev.sana.EcomProductService.DTO.ProductResponseDTO;
 import dev.sana.EcomProductService.Entity.Product;
 import dev.sana.EcomProductService.Exception.InvalidInputException;
 import dev.sana.EcomProductService.Service.ProductService;
-import dev.sana.EcomProductService.ServiceImpl.FakeStoreProductServiceImpl;
-import jakarta.persistence.Cacheable;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
