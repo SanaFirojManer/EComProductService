@@ -42,3 +42,25 @@ If your ProductController inherits from or composes another controller (like a C
  M:M    Only mapping table
 
  default spring structure is mapping table for all
+
+ Fech type
+ Lazy  --> I will only first layer only category Just fech what is required any attribute out of that table will not fech.
+ Eager --> all fechched in one time
+ DTO and Entity
+
+ 1)controller   dto
+    service     dto
+       repo     entity
+        db      entity
+
+        actual conversion of dto --> entity at service layer conversion is part of business logic
+        that mean code of mapper will invoke from service
+
+
+ 2)3rd part client
+    controller          dto
+        service         dto
+            client      dto
+
+
+ *Ideally all apis and client should have their own  two dtos 1)request 2)response

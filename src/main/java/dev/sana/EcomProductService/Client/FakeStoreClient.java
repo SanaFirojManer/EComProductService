@@ -1,7 +1,7 @@
 package dev.sana.EcomProductService.Client;
 
-import dev.sana.EcomProductService.DTO.FakeStoreCartResponseDTO;
-import dev.sana.EcomProductService.DTO.FakeStoreProductResponseDTO;
+import dev.sana.EcomProductService.DTO.FakeStoreDTOs.FakeStoreCartResponseDTO;
+import dev.sana.EcomProductService.DTO.FakeStoreDTOs.FakeStoreProductResponseDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.web.client.RestTemplateBuilder;

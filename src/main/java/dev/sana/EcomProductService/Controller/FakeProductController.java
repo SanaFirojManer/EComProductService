@@ -1,6 +1,6 @@
 package dev.sana.EcomProductService.Controller;
 
-import dev.sana.EcomProductService.DTO.FakeStoreProductResponseDTO;
+import dev.sana.EcomProductService.DTO.FakeStoreDTOs.FakeStoreProductResponseDTO;
 import dev.sana.EcomProductService.Exception.InvalidInputException;
 import dev.sana.EcomProductService.Exception.RandomException;
 import dev.sana.EcomProductService.ServiceImpl.FakeStoreProductServiceImpl;

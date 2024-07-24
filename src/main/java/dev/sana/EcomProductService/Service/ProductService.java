@@ -1,6 +1,6 @@
 package dev.sana.EcomProductService.Service;
 
-import dev.sana.EcomProductService.DTO.FakeStoreProductResponseDTO;
+import dev.sana.EcomProductService.DTO.CreateProductRequestDTO;
 import dev.sana.EcomProductService.DTO.ProductResponseDTO;
 import dev.sana.EcomProductService.Entity.Product;
 
@@ -8,17 +8,17 @@ import java.util.List;
 import java.util.UUID;
 
 public interface ProductService {
-    List<Product> getAllProducts();
+    List<ProductResponseDTO> getAllProducts();
 
-    Product getProduct(UUID productId);
+    ProductResponseDTO getProduct(UUID productId);
 
-    Product createProduct(Product product);
+    ProductResponseDTO createProduct(CreateProductRequestDTO product);
 
-    Product updateProduct(Product updatedProduct, UUID productId);
+    ProductResponseDTO updateProduct(CreateProductRequestDTO updatedProduct, UUID productId);
 
     boolean deleteProduct(UUID productId);
 
-    Product getProduct(String productName);
+    ProductResponseDTO getProduct(String productName);
 
-    List<Product> getProducts(double minPrice, double maxPrice);
+    List<ProductResponseDTO> getProducts(double minPrice, double maxPrice);
 }

@@ -1,5 +1,6 @@
-package dev.sana.EcomProductService.DTO;
+package dev.sana.EcomProductService.DTO.FakeStoreDTOs;
 
+import dev.sana.EcomProductService.DTO.ProductQuantityDTO;
 import lombok.Getter;
 import lombok.Setter;
 

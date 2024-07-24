@@ -1,5 +1,6 @@
 package dev.sana.EcomProductService.DTO;
 
+import dev.sana.EcomProductService.Entity.Category;
 import lombok.Getter;
 import lombok.Setter;
 

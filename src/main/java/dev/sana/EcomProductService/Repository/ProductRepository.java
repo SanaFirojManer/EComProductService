@@ -1,5 +1,6 @@
 package dev.sana.EcomProductService.Repository;
 
+import dev.sana.EcomProductService.DTO.ProductResponseDTO;
 import dev.sana.EcomProductService.Entity.Product;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;

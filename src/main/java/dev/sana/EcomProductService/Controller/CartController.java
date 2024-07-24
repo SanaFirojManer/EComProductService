@@ -1,8 +1,7 @@
 package dev.sana.EcomProductService.Controller;
 
 import dev.sana.EcomProductService.Client.FakeStoreClient;
-import dev.sana.EcomProductService.DTO.FakeStoreCartResponseDTO;
-import dev.sana.EcomProductService.DTO.FakeStoreProductResponseDTO;
+import dev.sana.EcomProductService.DTO.FakeStoreDTOs.FakeStoreCartResponseDTO;
 import dev.sana.EcomProductService.Exception.CartNotFoundException;
 import dev.sana.EcomProductService.Exception.RandomException;
 import org.springframework.beans.factory.annotation.Autowired;
